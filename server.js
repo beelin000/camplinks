@@ -8,6 +8,7 @@ var express       = require("express"),
     passport      = require("passport"),
     cookieParser  = require("cookie-parser"),
     LocalStrategy = require("passport-local"),
+    
     flash         = require("connect-flash"),
     Campground    = require("./models/campground"),
     Comment       = require("./models/comment"),
@@ -27,12 +28,6 @@ var apiRouters = require("./routes/api"),
 //start express
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));// use public folder for static files
-
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useFindAndModify', false);
-mongoose.set('useCreateIndex', true);
-mongoose.set('useUnifiedTopology', true);
 
 // set the view engine
 app.set("view engine", "ejs")
@@ -104,6 +99,9 @@ app.use("/", indexRouters);
 app.use("/api", apiRouters);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
+
+
+app.use(express.static("public"));
 
 
 
