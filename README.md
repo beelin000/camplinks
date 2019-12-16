@@ -1,3 +1,9 @@
+# CampLinks - Share and prepare for your next trip!
+
+## Introduction
+
+This project is to build a campground information sharing app. Users can scan detailed description of campgrounds on the website, including photos, introduction articles, location(shown with Google map), users’ comments and overall rating score. In addition, users can post new campgrounds to the community or give their own comments and ratings to other campgrounds when you signed in your account.
+
 ## Live DEMO
 https://camplinks-web2560-v3.glitch.me
 
